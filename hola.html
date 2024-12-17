@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres salir conmigo?</title>
+    <style>
+        /* Estilo general */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f9a8d4, #f472b6, #ec4899, #db2777);
+            color: white;
+            text-align: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Contenedor principal */
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        /* Botones */
+        .btn {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            margin: 10px;
+            color: white;
+            background-color: #ec4899;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #db2777;
+        }
+
+        /* Resultado */
+        .resultado {
+            margin-top: 20px;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres salir conmigo un rato?</h1>
+        <button class="btn" onclick="mostrarRespuesta('si')">Sí</button>
+        <button class="btn" onclick="mostrarRespuesta('no')">No</button>
+        <div id="respuesta" class="resultado"></div>
+    </div>
+
+    <script>
+        function mostrarRespuesta(opcion) {
+            const respuestaDiv = document.getElementById("respuesta");
+            if (opcion === 'si') {
+                respuestaDiv.innerHTML = "❤️";
+            } else {
+                respuestaDiv.innerHTML = "😢";
+            }
+        }
+    </script>
+</body>
+</html>
